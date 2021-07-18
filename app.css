@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #081c15;
+  font-family: "Encode Sans SC", sans-serif;
+}
+
+h1 {
+  color: #d8f3dc;
+  padding: 2rem 2rem;
+}
+
+p{
+    color: #d8f3dc;
+}
+
+#imgUrl{
+  margin-bottom: 1.2rem;
+}
+
+
+.github a{
+  color: #d8f3dc;
+  text-decoration: none;
+}
+
+.github{
+  float: right;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: 20rem 20rem 20rem;
+  grid-gap: 1.2rem;
+}
+
+.group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+input {
+  color: #d8f3dc;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  background: transparent;
+  border: 0.2rem solid #d8f3dc;
+  caret-color: #52b788;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  color: #d8f3dc;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+  top: 1px;
+  font-size: 0.8rem;
+  color: #d8f3dc;
+}
+
+button {
+  padding: 0.5rem;
+  background: #2d6a4f;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  margin: 0 0.5rem;
+}
+
+button:focus-visible{
+  outline: none;
+}
+
+@media screen and (max-width: 1050px) {
+  .image-grid {
+    grid-template-columns: 20rem 20rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .image-grid {
+    grid-template-columns: 20rem;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
